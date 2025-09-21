@@ -1,7 +1,6 @@
 import DotGrid from "../../components/DotGrid.jsx";
 
 const MyDotGrid = ()=> {
-    console.log("MyDotGrid rendered!");
 
     return (
         <DotGrid

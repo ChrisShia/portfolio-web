@@ -257,17 +257,29 @@ const DotGrid = ({
 
     }, [maxSpeed, speedTrigger, proximity, resistance, returnDuration, shockRadius, shockStrength]);
 
-    useEffect(() => {
-        const handleMouseLeave = () => {
+    // useEffect(() => {
+    //     const handleMouseLeave = () => {
+    //         // Move the pointer far away so dots return to base color
+    //         pointerRef.current.x = -9999;
+    //         pointerRef.current.y = -9999;
+    //         console.log(pointerRef)
+    //     };
+    //
+    //     window.addEventListener('mouseleave', handleMouseLeave);
+    //     return () => {
+    //         window.removeEventListener('mouseleave', handleMouseLeave);
+    //     };
+    // }, []);
 
-        }
-
-        window.addEventListener('mouseleave', handleMouseLeave)
-    })
+    const handleMouseLeave = () => {
+        // Move the pointer far away so dots return to base color
+        pointerRef.current.x = -999;
+        pointerRef.current.y = -999;
+    };
 
     return (
         <section className={`dot-grid ${className}`} style={style}>
-            <div ref={wrapperRef} className="dot-grid__wrap">
+            <div ref={wrapperRef} className="dot-grid__wrap" onMouseLeave={handleMouseLeave}>
                 <canvas ref={canvasRef} className="dot-grid__canvas" />
             </div>
         </section>
