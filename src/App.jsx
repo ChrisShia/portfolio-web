@@ -11,22 +11,12 @@ function App() {
     const dockItems = useDockItems();
 
       return (
-          <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
+          <div style={{ width: '100vw', height:'100vw' }}>
                 <MyDotGrid />
-                <div
-                    style={{
-                        position: 'absolute',
-                        top: '50%',
-                        left: '50%',
-                        transform: 'translate(-50%, -50%)',
-                        textAlign: 'center',
-                        color: 'white', // or any color that pops on the DotGrid
-                    }}>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/me" element={<Me />} />
-                    </Routes>
-                </div>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/me" element={<Me />} />
+                </Routes>
                 <Dock
                     items={dockItems}
                     panelHeight={78}

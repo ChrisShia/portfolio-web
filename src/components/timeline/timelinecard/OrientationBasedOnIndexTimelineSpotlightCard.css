@@ -1,0 +1,9 @@
+.left-timeline-spotlight-card {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right-timeline-spotlight-card {
+    display: flex;
+    justify-content: flex-start;
+}

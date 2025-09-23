@@ -1,0 +1,12 @@
+.timeline-bottom-fade {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 500px; /* adjust depending on how tall the fade should be */
+    pointer-events: none; /* allows clicks to pass through */
+    background: linear-gradient(
+            rgba(0, 0, 0, 0) 0%, /* fully transparent at top */
+            rgba(0, 0, 0, 0.9) 100% /* fades to darker at bottom */
+    );
+}
