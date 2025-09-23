@@ -257,6 +257,7 @@ const DotGrid = ({
 
     }, [maxSpeed, speedTrigger, proximity, resistance, returnDuration, shockRadius, shockStrength]);
 
+    //NOTE: mouseleave did not work, due to an existing overlaying component...
     useEffect(() => {
         const handleMouseOut = (e) => {
             if (!e.relatedTarget) {
@@ -265,16 +266,10 @@ const DotGrid = ({
             }
         };
 
-        // const handleMouseOver = () => {
-        //     console.log("Mouse entered");
-        // };
-
         document.addEventListener("mouseout", handleMouseOut);
-        // document.addEventListener("mouseover", handleMouseOver);
 
         return () => {
             document.removeEventListener("mouseout", handleMouseOut);
-            // document.removeEventListener("mouseover", handleMouseOver);
         };
     }, []);
 
