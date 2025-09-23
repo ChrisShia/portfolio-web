@@ -257,29 +257,30 @@ const DotGrid = ({
 
     }, [maxSpeed, speedTrigger, proximity, resistance, returnDuration, shockRadius, shockStrength]);
 
-    // useEffect(() => {
-    //     const handleMouseLeave = () => {
-    //         // Move the pointer far away so dots return to base color
-    //         pointerRef.current.x = -9999;
-    //         pointerRef.current.y = -9999;
-    //         console.log(pointerRef)
-    //     };
-    //
-    //     window.addEventListener('mouseleave', handleMouseLeave);
-    //     return () => {
-    //         window.removeEventListener('mouseleave', handleMouseLeave);
-    //     };
-    // }, []);
+    useEffect(() => {
+        const handleMouseOut = (e) => {
+            if (!e.relatedTarget) {
+                pointerRef.current.x = -999;
+                pointerRef.current.y = -999;
+            }
+        };
 
-    const handleMouseLeave = () => {
-        // Move the pointer far away so dots return to base color
-        pointerRef.current.x = -999;
-        pointerRef.current.y = -999;
-    };
+        // const handleMouseOver = () => {
+        //     console.log("Mouse entered");
+        // };
+
+        document.addEventListener("mouseout", handleMouseOut);
+        // document.addEventListener("mouseover", handleMouseOver);
+
+        return () => {
+            document.removeEventListener("mouseout", handleMouseOut);
+            // document.removeEventListener("mouseover", handleMouseOver);
+        };
+    }, []);
 
     return (
         <section className={`dot-grid ${className}`} style={style}>
-            <div ref={wrapperRef} className="dot-grid__wrap" onMouseLeave={handleMouseLeave}>
+            <div ref={wrapperRef} className="dot-grid__wrap">
                 <canvas ref={canvasRef} className="dot-grid__canvas" />
             </div>
         </section>
