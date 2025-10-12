@@ -1,0 +1,24 @@
+.page-header-container {
+    border: 2px solid #333;
+    border-radius: 12px;
+}
+
+@media (max-width: 1224px) {
+    .page-header-container {
+        margin-left:3rem;
+        margin-right:3rem;
+        height: 650px
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header-container {
+        height: 550px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header-container {
+        height: 500px;
+    }
+}

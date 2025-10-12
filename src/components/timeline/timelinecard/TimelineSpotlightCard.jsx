@@ -3,13 +3,13 @@ import SpotlightCard from "../../../../components/SpotlightCard.jsx";
 
 
 
- function TimelineSpotlightCard({item, className}) {
+ function TimelineSpotlightCard({item, className, spotlightColor}) {
     return (
             <div className={className}>
-                <SpotlightCard spotlightColor="rgba(0, 229, 255, 0.2)">
-                    <div>{item.content}</div>
-                    <div>{item.year}</div>
-                    <div>{item.institution}</div>
+                <SpotlightCard spotlightColor={spotlightColor}>
+                    <div><code>{item.content}</code></div>
+                    <div><code>{item.year}</code></div>
+                    <div style={{justifyContent: "left"}}><code>{item.institution}</code></div>
                 </SpotlightCard>
             </div>
     )

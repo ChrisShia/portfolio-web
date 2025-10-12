@@ -7,14 +7,14 @@ export default function useDockItems() {
     const navigate = useNavigate();
 
     const items = [
-        {icon: <VscRobot size={21}/>, label: 'Me', onClick: () => navigate('/me')},
-        {icon: <VscTerminal size={21}/>, label: 'Code', onClick: () => alert('Log in!')},
         {icon: <VscHome size={21}/>, label: 'Home', onClick: () => navigate('/')},
-        {
-            icon: <RiLinkedinLine size={21}/>,
-            label: 'LinkedIn',
-            onClick: () => window.open('https://linkedin.com/in/YOUR_USERNAME', '_blank')
-        },
+        {icon: <VscRobot size={21}/>, label: 'Me', onClick: () => navigate('/me')},
+        {icon: <VscTerminal size={21}/>, label: 'Projects', onClick: () => navigate('/projects')},
+        // {
+        //     icon: <RiLinkedinLine size={21}/>,
+        //     label: 'LinkedIn',
+        //     onClick: () => window.open('https://linkedin.com/in/YOUR_USERNAME', '_blank')
+        // },
         {icon: <FiLogIn size={21}/>, label: 'Login', onClick: () => alert('Log in!')},
     ];
 

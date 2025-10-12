@@ -1,9 +1,29 @@
+.orientation-timeline-spotlight-card {
+    font-weight: bold;
+}
+
+.orientation-timeline-spotlight-card:hover {
+    /*filter: brightness(150%);*/
+}
+
 .left-timeline-spotlight-card {
     display: flex;
     justify-content: flex-end;
+}
+.left-timeline-spotlight-card:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+.left-timeline-spotlight-card.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 .right-timeline-spotlight-card {
     display: flex;
     justify-content: flex-start;
+}
+.right-timeline-spotlight-card:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+.right-timeline-spotlight-card.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
 }

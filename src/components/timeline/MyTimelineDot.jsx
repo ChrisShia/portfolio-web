@@ -1,7 +1,7 @@
 import React from "react";
 import TimelineDot from "@mui/lab/TimelineDot";
 
-export default function CustomTimelineDot({ size = 18, customColor, color, sx, ...props }) {
+export default function CustomTimelineDot({ size = 18, customColor, color, sx }) {
     return (
         <TimelineDot
             color={color}
@@ -11,7 +11,6 @@ export default function CustomTimelineDot({ size = 18, customColor, color, sx, .
                 backgroundColor: customColor || undefined,
                 ...sx,
             }}
-            {...props}
         />
     );
 }
