@@ -1,5 +1,5 @@
 import ModularAlternateReverseTimeline from "../components/timeline/ModularAlternateReverseTimeline.jsx";
-import "./style/Me.css"
+import "./style/TimelineFooterFade.css"
 import AnimatedContent from "../../components/AnimatedContent.jsx";
 import ResponsiveModularTimeline from "../components/timeline/ResponsiveModularTimeline.jsx";
 
@@ -20,7 +20,7 @@ function Bio() {
                     delay={0.3}>
                     <ResponsiveModularTimeline />
                 </AnimatedContent>
-                <div className="timeline-bottom-fade" />
+                <div className="timeline-footer-fade" />
             </>
     )
 }

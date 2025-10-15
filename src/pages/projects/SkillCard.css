@@ -1,0 +1,44 @@
+.skill-card {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-card-header {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    gap: 1%;
+    display: flex;
+    justify-content: flex-start;
+    height:45px;
+    font-size: 25px;
+    background: #542875;
+}
+
+.skill-card-title {
+    font-weight: bold;
+    /*justify-content: flex-start;*/
+    padding-top: 3px;
+}
+
+.skill-card-icon {
+    height: auto;
+    width: 40px;
+    padding: 1%;
+    margin-left: 1%;
+}
+
+.skill-card-image-container {
+    flex: 1;             /* take remaining height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.skill-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
