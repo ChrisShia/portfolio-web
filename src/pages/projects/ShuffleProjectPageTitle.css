@@ -2,4 +2,37 @@
     display: flex ;
     flex-direction: column;
     align-items: flex-start;
+    margin: 3rem 0 0 3rem;
+}
+
+.shuffle-word-fun {
+    font-size: 4.5rem;
+}
+
+@media (max-width: 680px) {
+    .shuffle-word-fun {
+        font-size: 65px;
+    }
+
+    .shuffle-word-projects {
+        font-size: 60px;
+    }
+
+    .shuffle-title {
+
+    }
+}
+
+@media (max-width: 500px) {
+    .shuffle-word-fun {
+        font-size: 3.5rem;
+    }
+
+    .shuffle-word-projects {
+        font-size: 2.5rem;
+    }
+
+    .shuffle-title {
+        margin: 6% 0 0 6%;
+    }
 }

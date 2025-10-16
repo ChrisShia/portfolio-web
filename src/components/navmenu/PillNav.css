@@ -185,11 +185,14 @@
     border: 2px solid #222;
     background-color: #1b1526;
     align-items: center;
+
+    background: linear-gradient(200deg, #7c3aed, #182fff99) 0 0 / 200% 200%;
 }
 
 @media (max-width: 768px) {
     .mobile-menu-button {
         display: flex;
+        background-color: transparent;
     }
 }
 
@@ -239,6 +242,7 @@
     opacity: 0;
     /*transform-origin: top center;*/
     visibility: hidden;
+    background-color: transparent;
 }
 
 .mobile-menu-list {

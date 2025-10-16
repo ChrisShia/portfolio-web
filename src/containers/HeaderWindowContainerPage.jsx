@@ -1,7 +1,7 @@
 import HeaderWindowContainer from "./HeaderWindowContainer.jsx";
-import "./PageHeaderWindowContainer.css"
+import "./HeaderWindowContainerPage.css"
 
-function PageHeaderWindowContainer({children}) {
+function HeaderWindowContainerPage({children}) {
     return (
         <HeaderWindowContainer className={"page-header-container"}>
             {children}
@@ -9,4 +9,4 @@ function PageHeaderWindowContainer({children}) {
     )
 }
 
-export default PageHeaderWindowContainer;
+export default HeaderWindowContainerPage;

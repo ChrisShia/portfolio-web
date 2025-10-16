@@ -1,5 +1,5 @@
 import MyCardSwap, {Card} from "../components/cardswap/MyCardSwap.jsx";
-import PageHeaderWindowContainer from "../containers/PageHeaderWindowContainer.jsx";
+import HeaderWindowContainerPage from "../containers/HeaderWindowContainerPage.jsx";
 import Shuffle from "../../components/Shuffle.jsx";
 import "./projects/SkillCard.css"
 import "../components/cardswap/MyCardSwap.css"
@@ -9,12 +9,12 @@ import {useEffect, useState} from "react";
 import skills from "../api/SkillsAPI.jsx";
 import TitleImageContainerComponent from "../components/cardswap/card/TitleImageContainerComponent.jsx";
 
-function ShuffleWord({text}) {
+function ShuffleWord({text, className, duration}) {
     return (
         <Shuffle
             text={text}
             shuffleDirection="right"
-            duration={0.35}
+            duration={duration}
             animationMode="evenodd"
             shuffleTimes={1}
             ease="power3.out"
@@ -25,6 +25,7 @@ function ShuffleWord({text}) {
             respectReducedMotion={true}
             loop={true}
             loopDelay={2}
+            className={className}
         />
     )
 }
@@ -48,20 +49,11 @@ function Projects() {
     }, []);
 
     if (loading) {
-        return (
-            <PageHeaderWindowContainer>
-                <div style={{ textAlign: "center", padding: "2rem" }}>Loading...</div>
-            </PageHeaderWindowContainer>
-        );
-    }
 
-    if (codingSkills.length === 0) {
         return (
-            <PageHeaderWindowContainer>
-                <div style={{ textAlign: "center", padding: "2rem" }}>
-                    No coding skills found.
-                </div>
-            </PageHeaderWindowContainer>
+            <HeaderWindowContainerPage>
+                <div style={{ textAlign: "center", padding: "2rem" }}></div>
+            </HeaderWindowContainerPage>
         );
     }
 
@@ -82,10 +74,14 @@ function Projects() {
         ))
 
     return (
-            <PageHeaderWindowContainer>
+            <HeaderWindowContainerPage>
                 <div className={"shuffle-title"}>
-                    <ShuffleWord text={"FUN &"}/>
-                    <ShuffleWord text={"PROJECTS"}/>
+                    <div>
+                    <ShuffleWord text={"FUN"} className={"shuffle-word-fun"}/>
+                    <ShuffleWord text={"/"} duration={0} className={"shuffle-word-fun"}/>
+                    <ShuffleWord text={"&"} className={"shuffle-word-fun"}/>
+                    </div>
+                    <ShuffleWord text={"PROJECTS"} className={"shuffle-word-projects"}/>
                 </div>
                 <MyCardSwap
                     cardDistance={90}
@@ -98,7 +94,10 @@ function Projects() {
                     {cardList.map((item) => item)}
 
                 </MyCardSwap>
-            </PageHeaderWindowContainer>
+
+                
+
+            </HeaderWindowContainerPage>
     )
 }
 
