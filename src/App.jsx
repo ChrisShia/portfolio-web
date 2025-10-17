@@ -18,30 +18,33 @@ function App() {
         query: '(max-width: 768px)'
     })
     return (
-          <div style={{ width: '100vw', height:'100vh'}}>
-                <MyDotGrid />
-              {isMobile && <PillNav
-                  logoLink={'/'}
-                  items={navMenuItems}
-                  activeHref="/"
-                  className="custom-nav"
-                  ease="power2.easeOut"
-                  baseColor="#000000"
-                  pillColor="#ffffff"
-                  hoveredPillTextColor="#ffffff"
-                  pillTextColor="#000000"
-              />}
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/me" element={<Bio />} />
-                    <Route path="/projects" element={<Projects />} />
-                </Routes>
-              {!isMobile &&<Dock
-                    items={dockItems}
-                    panelHeight={78}
-                    baseItemSize={60}
-                    magnification={80}
-                />}
+          <div className={"app-outer-wrap"}>
+              <MyDotGrid />
+
+              <div className={"app-inner-wrap"}>
+                  {isMobile && <PillNav
+                      logoLink={'/'}
+                      items={navMenuItems}
+                      activeHref="/"
+                      className="custom-nav"
+                      ease="power2.easeOut"
+                      baseColor="#000000"
+                      pillColor="#ffffff"
+                      hoveredPillTextColor="#ffffff"
+                      pillTextColor="#000000"
+                  />}
+                  <Routes>
+                      <Route path="/" element={<Home />} />
+                      <Route path="/me" element={<Bio />} />
+                      <Route path="/projects" element={<Projects />} />
+                  </Routes>
+                  {!isMobile &&<Dock
+                      items={dockItems}
+                      panelHeight={78}
+                      baseItemSize={60}
+                      magnification={80}
+                  />}
+              </div>
           </div>
       )
 }

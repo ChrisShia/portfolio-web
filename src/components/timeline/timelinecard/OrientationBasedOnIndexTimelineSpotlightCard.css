@@ -10,20 +10,18 @@
     display: flex;
     justify-content: flex-end;
 }
-.left-timeline-spotlight-card:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-}
-.left-timeline-spotlight-card.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
 .right-timeline-spotlight-card {
     display: flex;
     justify-content: flex-start;
 }
-.right-timeline-spotlight-card:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+
+.right-timeline-spotlight-card > .card-spotlight:hover {
+    /*filter: drop-shadow(0.5rem 0rem 0.5rem rgba(120, 120, 120, 2.5));*/
+    filter: drop-shadow(0rem 0rem 0.5rem rgba(120, 120, 120, 2.5));
 }
-.right-timeline-spotlight-card.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
+
+.left-timeline-spotlight-card > .card-spotlight:hover {
+    filter: drop-shadow(0rem 0rem 0.5rem rgba(120, 120, 120, 2.5));
+    /*filter: drop-shadow(-0.5rem 0rem 0.5rem rgba(120, 120, 120, 2.5));*/
 }

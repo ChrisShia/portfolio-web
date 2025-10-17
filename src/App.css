@@ -39,3 +39,19 @@ html, body, #root {
     width: 100%;
     height: 100%;
 }
+
+.app-outer-wrap {
+    width: 100vw;
+    height: 100vh;
+}
+
+.app-inner-wrap {
+
+}
+
+@media (max-width: 1200px) {
+    .app-inner-wrap {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
