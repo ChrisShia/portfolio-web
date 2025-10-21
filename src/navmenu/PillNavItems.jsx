@@ -1,6 +1,4 @@
 function usePillNavItems() {
-    // const navigate = useNavigate();
-
     const items = [
         // {label: 'Home', href: '/'},
         {label: 'Bio', href: '/me'},

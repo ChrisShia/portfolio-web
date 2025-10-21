@@ -43,7 +43,8 @@ function ModularAlternateReverseTimeline() {
                     {timelineContents.map((item, index) => (
                         <TimelineItem key={index}>
                             <TimelineSeparator>
-                                <CustomTimelineDot size={20} customColor={"#fff"}/>
+                                {/*<CustomTimelineDot size={20} customColor={"#fff"}/>*/}
+                                <div className={"timeline-separator-dot"}>{item.year}</div>
                                 <TimelineConnector/>
                             </TimelineSeparator>
                             <TimelineContent >

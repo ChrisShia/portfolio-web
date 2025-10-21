@@ -10,11 +10,6 @@
   visibility: hidden; /* hidden until initialized to avoid flash/jump */
 }
 
-/*@media (max-width: )*/
-/*.shuffle-parent {*/
-
-/*}*/
-
 .shuffle-parent.is-ready {
   visibility: visible;
 }

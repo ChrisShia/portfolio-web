@@ -1,5 +1,4 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -46,12 +45,18 @@ html, body, #root {
 }
 
 .app-inner-wrap {
-
+    padding-top: 2rem;
 }
 
 @media (max-width: 1200px) {
     .app-inner-wrap {
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-inner-wrap {
+        padding-top: 0;
     }
 }

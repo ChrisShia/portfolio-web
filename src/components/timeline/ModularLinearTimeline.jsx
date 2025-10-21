@@ -14,7 +14,7 @@ function ModularLinearTimelineLastConnector() {
 
     return (
         <div style={{width:'vw', height:'15rem'}}>
-            <TimelineSeparator style={{width:'20px'}}>
+            <TimelineSeparator style={{width:'39px'}}>
                 <TimelineConnector style={{height: '20rem'}}/>
             </TimelineSeparator>
         </div>
@@ -42,7 +42,7 @@ function ModularLinearTimeline() {
                 {timelineContents.map((item, index) => (
                     <TimelineItem key={index}>
                         <TimelineSeparator>
-                            <CustomTimelineDot size={20} customColor={"#fff"}/>
+                            <div className={"timeline-separator-dot"}>{item.year}</div>
                             <TimelineConnector/>
                         </TimelineSeparator>
                         <TimelineContent >

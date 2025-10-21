@@ -1,5 +1,5 @@
 import ModularAlternateReverseTimeline from "../components/timeline/ModularAlternateReverseTimeline.jsx";
-import "./style/TimelineFooterFade.css"
+import "./bio/TimelineFooterFade.css"
 import AnimatedContent from "../../components/AnimatedContent.jsx";
 import ResponsiveModularTimeline from "../components/timeline/ResponsiveModularTimeline.jsx";
 
@@ -7,6 +7,7 @@ function Bio() {
 
     return (
             <>
+
                 <AnimatedContent
                     distance={50}
                     direction="vertical"

@@ -1,20 +1,80 @@
-.card-spotlight {
+/*@media min-width{*/
+.project-card-wrapper {
+    width: 100%;
+}
+
+/*}*/
+
+.header {
+    display: flex;
+    height:45px;
+    font-size: 15px;
+    background: #282d75;
+    padding-left: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title {
+    font-family: "Press Start 2P", sans-serif;
+    letter-spacing: 0px;
+}
+
+.title-icon {
+    width: 40px;
+}
+
+.content {
+    padding: 1rem 2rem;
+}
+
+.short-description {
+    /*margin: 0 1rem;*/
+}
+
+.footer {
+    display: flex;
+    padding: 1rem 1rem;
+    justify-content: space-between;
+}
+
+.technologies {
+    display: flex;
+    gap: 3px;
+}
+
+.github {
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.github > svg {
+    width: 100%;
+    height: 100%;
+}
+
+.project-card-spotlight {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     position: relative;
     border-radius: 1.5rem;
     border: 1px solid #222;
     background-color: rgb(55 65 81);
+    /*padding: 2rem;*/
     overflow: hidden;
     --mouse-x: 50%;
     --mouse-y: 50%;
     max-width: 30rem;
+    height: 100%;
     /*--spotlight-color: rgba(255, 255, 255, 0.05);*/
     /*  --spotlight-color: rgba(126, 20, 202, 0.05);*/
     box-shadow: rgba(0, 0, 0, 0.09) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.09) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.09) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.card-spotlight::before {
+.project-card-spotlight::before {
     content: '';
     position: absolute;
     top: 0;
@@ -27,34 +87,9 @@
     pointer-events: none;
 }
 
-.card-spotlight:hover::before,
-.card-spotlight:focus-within::before {
+.project-card-spotlight:hover::before,
+.project-card-spotlight:focus-within::before {
     opacity: 0.6;
-}
-
-.timeline-header {
-    display: flex;
-    height:45px;
-    font-size: 15px;
-    background: linear-gradient(200deg, #7c3aed, #182fff99) 0 0 / 200% 200%;
-    padding-left: 0.5rem;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.timeline-title {
-    font-family: "Arial Black", sans-serif;
-    letter-spacing: 0;
-}
-
-.timeline-date
-
-.title-icon {
-    width: 40px;
-}
-
-.content {
-    padding: 1rem 2rem;
 }
 
 /*.card-spotlight:hover {*/

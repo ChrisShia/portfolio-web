@@ -13,7 +13,8 @@
     justify-content: flex-start;
     height:45px;
     font-size: 25px;
-    background: #542875;
+    /*background: #542875;*/
+    background: #282d75;
 }
 
 .skill-card-title {

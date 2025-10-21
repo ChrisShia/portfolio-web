@@ -1,4 +1,11 @@
 .modular-alternate-reverse-timeline {
-    width: 100vw;
+    width: auto;
     height: 100vh;
+}
+
+.timeline-separator-dot {
+    border: 2px solid #fff;
+    border-radius: 50px;
+    padding: 5px;
+    font-size: 11px;
 }

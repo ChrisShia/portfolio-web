@@ -185,6 +185,8 @@
     background-color: #1b1526;
     align-items: center;
 
+    padding-right: 18px;
+
     background: linear-gradient(200deg, #7c3aed, #182fff99) 0 0 / 200% 200%;
 }
 
