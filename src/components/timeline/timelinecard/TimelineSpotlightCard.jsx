@@ -26,8 +26,8 @@ const SpotlightCard = ({ children, className = '', spotlightColor = 'rgba(255, 2
     return (
             <div className={className}>
                 <SpotlightCard spotlightColor={spotlightColor}>
-                    <div className={"timeline-header"}>
-                        {/*<div className={"timeline-date"}>{item.year}</div>*/}
+                    <div className={"timeline-card-header"}>
+                        <div className={"timeline-card-icon"} dangerouslySetInnerHTML={{ __html: item.icon }} />
                         <div className={"timeline-title"}>{item.title}</div>
                     </div>
                     <div className={"content"}>{item.content}</div>

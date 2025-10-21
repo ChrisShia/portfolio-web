@@ -9,6 +9,10 @@
     font-size: 4.5rem;
 }
 
+.shuffle-word-milestones {
+    font-size: 3rem;
+}
+
 @media (max-width: 900px) {
     .shuffle-word-bio {
         font-size: 3rem;
@@ -21,20 +25,33 @@
 
 @media (max-width: 680px) {
     .shuffle-word-bio {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .shuffle-word-milestones {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 500px) {
     .shuffle-word-bio {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     .shuffle-word-milestones {
         font-size: 1.5rem;
+    }
+
+    .bio-shuffle-title {
+        margin: 3rem auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .shuffle-word-bio {
+        font-size: 2rem;
+    }
+    .shuffle-word-milestones {
+        font-size: 1rem;
     }
 
     .bio-shuffle-title {

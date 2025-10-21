@@ -4,7 +4,7 @@ import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
-import CustomTimelineDot from "./MyTimelineDot.jsx";
+// import CustomTimelineDot from "./MyTimelineDot.jsx";
 import achievements from "../../api/AchievementsAPI.jsx";
 
 import {useEffect, useState} from "react";

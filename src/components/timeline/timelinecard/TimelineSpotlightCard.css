@@ -32,7 +32,7 @@
     opacity: 0.6;
 }
 
-.timeline-header {
+.timeline-card-header {
     display: flex;
     height:45px;
     font-size: 15px;
@@ -40,6 +40,11 @@
     padding-left: 0.5rem;
     justify-content: flex-start;
     align-items: center;
+}
+
+.timeline-card-icon {
+    width: 30px;
+    height: 30px;
 }
 
 .timeline-title {
