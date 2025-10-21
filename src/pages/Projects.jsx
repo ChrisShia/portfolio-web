@@ -1,6 +1,6 @@
 import MyCardSwap, {Card} from "../components/cardswap/MyCardSwap.jsx";
-import HeaderWindowContainerPage from "../containers/HeaderWindowContainerPage.jsx";
-import Shuffle from "../../components/Shuffle.jsx";
+import HeaderWindowContainerProjectsPage from "../containers/projects/HeaderWindowContainerProjectsPage.jsx";
+import ShuffleWord from "../components/shuffleword/ShuffleWord.jsx";
 import "./projects/SkillCard.css"
 import "../components/cardswap/MyCardSwap.css"
 import "./projects/ShuffleProjectPageTitle.css"
@@ -10,28 +10,6 @@ import skills from "../api/SkillsAPI.jsx";
 import TitleImageContainerComponent from "../components/cardswap/card/TitleImageContainerComponent.jsx";
 import "./Projects.css"
 import ProjectsGridContainer from "../containers/projects/ProjectsGridContainer.jsx";
-
-
-function ShuffleWord({text, className, duration}) {
-    return (
-        <Shuffle
-            text={text}
-            shuffleDirection="right"
-            duration={duration}
-            animationMode="evenodd"
-            shuffleTimes={1}
-            ease="power3.out"
-            stagger={0.03}
-            threshold={0.1}
-            triggerOnce={true}
-            triggerOnHover={true}
-            respectReducedMotion={true}
-            loop={true}
-            loopDelay={2}
-            className={className}
-        />
-    )
-}
 
 function Projects() {
     const [codingSkills, setCodingSkills] = useState([]);
@@ -55,9 +33,9 @@ function Projects() {
     if (loading) {
 
         return (
-            <HeaderWindowContainerPage>
+            <HeaderWindowContainerProjectsPage>
                 <div style={{ textAlign: "center", padding: "2rem" }}></div>
-            </HeaderWindowContainerPage>
+            </HeaderWindowContainerProjectsPage>
         );
     }
 
@@ -79,9 +57,9 @@ function Projects() {
 
     return (
         <div className={"projects"}>
-            <HeaderWindowContainerPage>
+            <HeaderWindowContainerProjectsPage>
                 <div className={"shuffle-title"}>
-                    <div className={"shuffle-word-fun"}>
+                    <div>
                         <ShuffleWord text={"FUN"} className={"shuffle-word-fun"}/>
                         <ShuffleWord text={"/"} duration={0} className={"shuffle-word-fun"}/>
                         <ShuffleWord text={"&"} className={"shuffle-word-fun"}/>
@@ -96,7 +74,7 @@ function Projects() {
                     height={400}>
                     {cardList.map((item) => item)}
                 </MyCardSwap>
-            </HeaderWindowContainerPage>
+            </HeaderWindowContainerProjectsPage>
 
             <ProjectsGridContainer />
         </div>

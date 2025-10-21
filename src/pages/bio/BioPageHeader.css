@@ -1,0 +1,43 @@
+.bio-shuffle-title {
+    display: flex ;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 3rem auto;
+}
+
+.shuffle-word-bio {
+    font-size: 4.5rem;
+}
+
+@media (max-width: 900px) {
+    .shuffle-word-bio {
+        font-size: 3rem;
+    }
+
+    .shuffle-word-milestones {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .shuffle-word-bio {
+        font-size: 2rem;
+    }
+
+    .shuffle-word-milestones {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .shuffle-word-bio {
+        font-size: 2.5rem;
+    }
+    .shuffle-word-milestones {
+        font-size: 1.5rem;
+    }
+
+    .bio-shuffle-title {
+        margin: 3rem auto;
+    }
+}

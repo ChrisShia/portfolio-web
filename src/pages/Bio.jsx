@@ -1,13 +1,25 @@
-import ModularAlternateReverseTimeline from "../components/timeline/ModularAlternateReverseTimeline.jsx";
 import "./bio/TimelineFooterFade.css"
 import AnimatedContent from "../../components/AnimatedContent.jsx";
 import ResponsiveModularTimeline from "../components/timeline/ResponsiveModularTimeline.jsx";
+import ShuffleWord from "../components/shuffleword/ShuffleWord.jsx";
+
+import "./bio/BioPageHeader.css"
+import HeaderWindowContainerBioPage from "../containers/bio/HeaderWindowContainerBioPage.jsx";
 
 function Bio() {
 
     return (
             <>
-
+                <HeaderWindowContainerBioPage>
+                    <div className={"bio-shuffle-title"}>
+                        <div>
+                            <ShuffleWord text={"Bio"} className={"shuffle-word-bio"}/>
+                            <ShuffleWord text={"/"} duration={0} className={"shuffle-word-bio"}/>
+                            <ShuffleWord text={"&"} className={"shuffle-word-bio"}/>
+                        </div>
+                        <ShuffleWord text={"Milestones"} className={"shuffle-word-milestones"}/>
+                    </div>
+                </HeaderWindowContainerBioPage>
                 <AnimatedContent
                     distance={50}
                     direction="vertical"

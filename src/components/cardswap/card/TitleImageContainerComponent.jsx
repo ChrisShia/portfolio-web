@@ -13,8 +13,7 @@ function TitleImageContainerComponent({item, containerClass, headerClass, iconCl
                 </div>
 
                 <div className={`${imageContainerClass}`}>
-                <img key={item.id}
-                     className={imageClass}
+                <img className={imageClass}
                      src={`data:image/png;base64,${item.image}`} // Base64 image
                      alt={item.title}
                      style={{ objectFit: "contain" }}

@@ -1,6 +1,4 @@
-.page-header-container {
-    /*border: 2px solid #333;*/
-    /*position: absolute;*/
+.page-header-container-bio-page {
     border-radius: 12px;
     max-width: 1200px;
     margin: 0 auto;
@@ -9,26 +7,30 @@
 }
 
 @media (max-width: 1224px) {
-    .page-header-container {
-        height: 650px;
+    .page-header-container-bio-page {
+        /*height: 650px;*/
+        /*padding: 2rem;*/
         width: auto;
     }
 }
 
 @media (max-width: 1020px) {
-    .page-header-container {
-        height: 550px;
+    .page-header-container-bio-page {
+        /*height: 550px;*/
+        padding: 2rem;
     }
 }
 
 @media (max-width: 768px) {
-    .page-header-container {
-        height: 500px;
+    .page-header-container-bio-page {
+        /*height: 500px;*/
+        padding: 2rem;
     }
 }
 
 @media (max-width: 500px) {
-    .page-header-container {
-        height: 500px;
+    .page-header-container-bio-page {
+        padding: 2rem;
+        /*height: 500px;*/
     }
 }

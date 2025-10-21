@@ -1,4 +1,6 @@
- function Home() {
+import ProfileCard from "../../components/ProfileCard.jsx";
+
+function Home() {
     return (
         <div
             style={{
@@ -9,14 +11,14 @@
                 textAlign: 'center',
                 color: 'white', // or any color that pops on the DotGrid
             }}>
-        <div>
-            <h1>
-                <code>Christos Shiakas</code>
-            </h1>
-             <p>
-                 <code>software / Engineering</code>
-             </p>
-        </div>
+            <div>
+                <h1>
+                    <code>Christos Shiakas</code>
+                </h1>
+                 <p>
+                     <code>software / Engineering</code>
+                 </p>
+            </div>
         </div>
     );
 }

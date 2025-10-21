@@ -12,7 +12,6 @@ function ProjectsGridContainer() {
             try {
                 const res = await projectsApi.get();
                 setProjects(res.data)
-                console.log(res.data)
             } catch (err) {
                 console.log(err)
             }
