@@ -47,7 +47,9 @@ function ProjectCard({icon, title, short_description,technologies, github_url}) 
                         <div className={"technologies"}>
                             {technologies.map((item, index) => (
                                 item ? (
-                                <div key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                                    <div key={index}>
+                                        <svg width="30px" height="30px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" dangerouslySetInnerHTML={{ __html: item }} />
+                                    </div>
                                 ) : (
                                     <div/>
                                 )

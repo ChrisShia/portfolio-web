@@ -27,7 +27,7 @@ const SpotlightCard = ({ children, className = '', spotlightColor = 'rgba(255, 2
             <div className={className}>
                 <SpotlightCard spotlightColor={spotlightColor}>
                     <div className={"timeline-card-header"}>
-                        <div className={"timeline-card-icon"} dangerouslySetInnerHTML={{ __html: item.icon }} />
+                        <svg className={"timeline-card-icon"} dangerouslySetInnerHTML={{ __html: item.icon }} />
                         <div className={"timeline-title"}>{item.title}</div>
                     </div>
                     <div className={"content"}>{item.content}</div>
