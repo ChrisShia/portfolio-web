@@ -29,7 +29,6 @@ function App() {
                       className="custom-nav"
                       ease="power2.easeOut"
                       baseColor="#000000"
-                      pillColor="#ffffff"
                       hoveredPillTextColor="#ffffff"
                       pillTextColor="#000000"
                   />}

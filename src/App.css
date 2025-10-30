@@ -50,8 +50,8 @@ html, body, #root {
 
 @media (max-width: 1200px) {
     .app-inner-wrap {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding: 1rem 1rem;
+        /*padding-right: 0.5rem;*/
     }
 }
 

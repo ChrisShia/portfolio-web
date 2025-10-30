@@ -22,7 +22,7 @@
     -webkit-backface-visibility: hidden;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1020px) {
     .card-swap-container {
         transform: scale(0.85) translate(5%, 29%);
     }

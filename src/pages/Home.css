@@ -1,0 +1,98 @@
+.word-with-rotating-text {
+    padding-top: 2rem;
+    margin: 0 auto;
+    display: flex;
+    gap: 3px;
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: "Arial Black", sans-serif;
+/*transform: scale(1, 3);*/
+    transform-origin: 50% 50% 0;
+    justify-content: center;
+    padding-left: 1.5rem;
+}
+
+.rotating-text {
+    /*transition-duration: 5s;*/
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: .2rem 0.7rem .2rem 3.5rem;
+    background: linear-gradient(200deg, #7c3aed, #182fff99) 0 0 / 200% 200%;
+    color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+    font-size: 2rem;
+
+    translate: -2.5rem;
+    clip-path: polygon(
+            0 0,
+            0 0,
+            100% 0%,
+            100% 0%,
+            100% 100%,
+            0% 100%,
+            52px 100%,
+            5% -22%
+    );
+}
+
+.software-word {
+    background-color: white;
+    border-radius: 10px;
+    color: #182fff99;
+    padding-right: 2rem;
+    padding-left: .7rem;
+    position: relative;
+    align-content: center;
+    overflow: hidden;
+    clip-path: polygon(
+            0 30%,
+            0 0,
+            79% 0,
+            97% 120%,
+            100% 100%,
+            90% 100%,
+            0% 100%,
+            0% 80%
+    );
+    translate: 1rem;
+}
+
+.home-name-heading {
+    white-space: nowrap;
+    font-weight: 900;
+    font-size: 3rem;
+    font-family: "Colombo", sans-serif;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    .home-name-heading {
+        font-size: 2rem;
+    }
+
+    .software-word {
+        font-size: 1rem;
+        translate: .7rem;
+        padding-right: 1.5rem;
+        padding-left: .7rem;
+    }
+
+    .rotating-text {
+        font-size: 1rem;
+        translate: -1rem;
+        padding: .3rem 0.7rem .3rem 1.7rem;
+        clip-path: polygon(
+                0 0,
+                0 0,
+                100% 0%,
+                100% 0%,
+                100% 100%,
+                0% 100%,
+                19% 100%,
+                5% -17%
+        );
+    }
+}

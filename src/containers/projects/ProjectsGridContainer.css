@@ -1,6 +1,6 @@
 .projects-grid-wrapper {
     display: grid;
-    padding-top: 4rem;
+    padding: 4rem 0 2rem 0;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 0.5rem;
     row-gap: 2rem;
