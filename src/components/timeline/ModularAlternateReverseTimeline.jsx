@@ -11,16 +11,16 @@ import achievements from "../../api/AchievementsAPI.jsx";
 
 import {useEffect, useState} from "react";
 
-function ModularAlternateReverseTimelineLastConnector() {
-
-    return (
-        <div style={{width:'vw', height:'15rem'}}>
-            <TimelineSeparator>
-                <TimelineConnector style={{height: '20rem'}}/>
-            </TimelineSeparator>
-        </div>
-    )
-}
+// function ModularAlternateReverseTimelineLastConnector() {
+//
+//     return (
+//         <div style={{width:'vw', height:'15rem'}}>
+//             <TimelineSeparator>
+//                 <TimelineConnector style={{height: '20rem'}}/>
+//             </TimelineSeparator>
+//         </div>
+//     )
+// }
 
 function ModularAlternateReverseTimeline() {
     const [timelineContents, setTimelineContents] = useState([]);
@@ -38,22 +38,21 @@ function ModularAlternateReverseTimeline() {
     }, []);
     return (
         <div className="modular-alternate-reverse-timeline">
+            <div className={"modular-alternate-reverse-timeline-container-bar"}></div>
             <Timeline position="alternate-reverse">
 
                     {timelineContents.map((item, index) => (
                         <TimelineItem key={index}>
-                            <TimelineSeparator>
+                            <TimelineSeparator className={"timeline-separator-custom"}>
                                 {/*<CustomTimelineDot size={20} customColor={"#fff"}/>*/}
                                 <div className={"timeline-separator-dot"}>{item.year}</div>
-                                <TimelineConnector/>
+                                {/*<TimelineConnector className={"connector"}/>*/}
                             </TimelineSeparator>
                             <TimelineContent >
                                 <OrientationBasedOnIndexTimelineSpotlightCard item={item} index={index}/>
                             </TimelineContent>
                         </TimelineItem>
                     ))}
-                    <ModularAlternateReverseTimelineLastConnector/>
-
             </Timeline>
         </div>
     );

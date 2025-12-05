@@ -1,0 +1,8 @@
+.fixed-footer {
+    min-height: 8rem;
+    height: 100px;
+    /*max-height: 100px;*/
+    /*border-top: 1px solid #282d75;*/
+    width: 100vw;
+    flex-grow: 0;
+}

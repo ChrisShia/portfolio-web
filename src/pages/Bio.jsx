@@ -1,15 +1,19 @@
-import "./bio/TimelineFooterFade.css"
-import AnimatedContent from "../../components/AnimatedContent.jsx";
 import ResponsiveModularTimeline from "../components/timeline/ResponsiveModularTimeline.jsx";
 import ShuffleWord from "../components/shuffleword/ShuffleWord.jsx";
-
+import { useMediaQuery } from 'react-responsive'
 import "./bio/BioPageHeader.css"
 import HeaderWindowContainerBioPage from "../containers/bio/HeaderWindowContainerBioPage.jsx";
+import Dock from "../../components/Dock.jsx";
+import useDockItems from "../dock/dockItems.jsx";
+import "./bio/Bio.css"
 
 function Bio() {
-
+    const dockItems = useDockItems();
+    const isMobile = useMediaQuery({
+        query: '(max-width: 768px)'
+    })
     return (
-            <>
+            <div className={"bio-page-container"}>
                 <HeaderWindowContainerBioPage>
                     <div className={"bio-shuffle-title"}>
                         <div>
@@ -20,21 +24,16 @@ function Bio() {
                         <ShuffleWord text={"Milestones"} className={"shuffle-word-milestones"}/>
                     </div>
                 </HeaderWindowContainerBioPage>
-                <AnimatedContent
-                    distance={50}
-                    direction="vertical"
-                    reverse={false}
-                    duration={1.2}
-                    // ease="bounce.out"
-                    initialOpacity={0.2}
-                    animateOpacity
-                    scale={1.1}
-                    threshold={0.2}
-                    delay={0.3}>
-                    <ResponsiveModularTimeline />
-                </AnimatedContent>
-                <div className="timeline-footer-fade" />
-            </>
+                <ResponsiveModularTimeline />
+                <div className={"fixed-footer"}>
+                    {!isMobile &&<Dock
+                        items={dockItems}
+                        panelHeight={78}
+                        baseItemSize={60}
+                        magnification={80}
+                    />}
+                </div>
+            </div>
     )
 }
 

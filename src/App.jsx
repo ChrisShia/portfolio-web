@@ -9,6 +9,7 @@ import Projects from "./pages/Projects.jsx";
 import usePillNavItems from "./navmenu/PillNavItems.jsx";
 import PillNav from "./components/navmenu/PillNav.jsx";
 import { useMediaQuery } from 'react-responsive'
+import "./containers/footer/PageFooter.css"
 
 
 function App() {
@@ -37,12 +38,6 @@ function App() {
                       <Route path="/me" element={<Bio />} />
                       <Route path="/projects" element={<Projects />} />
                   </Routes>
-                  {!isMobile &&<Dock
-                      items={dockItems}
-                      panelHeight={78}
-                      baseItemSize={60}
-                      magnification={80}
-                  />}
               </div>
           </div>
       )

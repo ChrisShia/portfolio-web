@@ -1,7 +1,6 @@
 import "./ProjectCard.css"
 import {useRef} from "react";
 import {VscGithub} from "react-icons/vsc";
-import { ReactSVG } from "react-svg";
 
 
 const ProjectSpotlightCard = ({ children, className = '', spotlightColor = 'rgba(255, 255, 255, 0.25)' }) => {

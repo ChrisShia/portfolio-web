@@ -20,23 +20,25 @@ function ProjectsGridContainer() {
         fetchProjects();
     }, []);
 
-    const projectList = projects.map((item,index) => (
-        item ? (
-                <ProjectCard key={index} icon={item.icon} title={item.title} short_description={item.short_description} technologies={item.technologies} github_url={item.github_url} />
-        ) : (
-            <div>
-                <ProjectCard/>
-            </div>
-        )
-    ))
+    // const projectList = projects.map((item,index) => (
+    //     item ? (
+    //             <ProjectCard key={index} icon={item.icon} title={item.title} short_description={item.short_description} technologies={item.technologies} github_url={item.github_url} />
+    //     ) : (
+    //         <div>
+    //             <ProjectCard/>
+    //         </div>
+    //     )
+    // ))
 
     return(
         <div className={"projects-grid-wrapper"}>
-            {projectList.map((item, index) => (
-                <div key={index}>
-                    {item}
-                </div>
-            ))}
+            {projects.map((item,index) => (
+                item ? (
+                    <ProjectCard key={index} icon={item.icon} title={item.title} short_description={item.short_description} technologies={item.technologies} github_url={item.github_url} />
+                ) : (
+                        <ProjectCard key={index}/>
+                )))
+            }
         </div>
     )
 }

@@ -46,6 +46,7 @@ html, body, #root {
 
 .app-inner-wrap {
     padding-top: 2rem;
+    height: 100%;
 }
 
 @media (max-width: 1200px) {

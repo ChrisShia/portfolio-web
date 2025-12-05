@@ -1,14 +1,20 @@
-.orientation-timeline-spotlight-card {
+.timeline-spotlight-card-wrapper {
     font-weight: bold;
+    width: 100%;
 }
 
-.orientation-timeline-spotlight-card:hover {
+.timeline-spotlight-card-wrapper:hover {
     /*filter: brightness(150%);*/
 }
 
 .left-timeline-spotlight-card {
     display: flex;
     justify-content: flex-end;
+}
+
+.linear-timeline-spotlight-card {
+    display: flex;
+    justify-content: center;
 }
 
 .right-timeline-spotlight-card {

@@ -2,7 +2,6 @@
     position: fixed;
   display:flex;
   margin: 0 0.5rem;
-  max-height: 100vw;
   align-items: center;
     bottom: 2.5rem;
     left: 50%;
