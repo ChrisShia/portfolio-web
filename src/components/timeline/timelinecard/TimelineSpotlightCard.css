@@ -63,8 +63,14 @@
 }
 
 .timeline-spotlight-card-content-paragraph {
+    font-weight: bold;
+    font-size: 15px;
     padding-bottom: 5px;
     text-align: start;
+}
+
+.timeline-spotlight-card-content-paragraph > li {
+    padding-bottom: 12px;
 }
 
 .timeline-spotlight-card-content-paragraph-numbered {
@@ -80,16 +86,13 @@
     text-align: start;
     font-size: 15px;
     font-weight: normal;
-    padding-top: 10px;
     padding-left: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .timeline-spotlight-card-content-paragraph-numbered > li {
-    padding-bottom: 5px;
 }
 
 .timeline-spotlight-card-content-paragraph-bulleted > li {
     list-style: square;
-    padding-bottom: 5px;
 }
