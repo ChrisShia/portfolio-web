@@ -12,7 +12,7 @@ function ResponsiveModularTimeline() {
             {isMobile ? (
                 <ModularLinearTimeline />
             ) : (
-                <div className={"modular-alternate-reverse-timeline-container"}>
+                <div className={"modular-alternate-reverse-timeline-scrollable-container"}>
                     <ModularAlternateReverseTimeline />
                 </div>
             )}

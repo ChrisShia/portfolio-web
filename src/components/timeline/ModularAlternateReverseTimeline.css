@@ -6,15 +6,17 @@
 }
 
 .timeline-separator-dot {
-    border: 3px solid #282d75;
-    background-color: #282d75;
+    background: linear-gradient(200deg, #7c3aed, #182fff99) 0 0 / 200% 200%;
+    border: 2px solid #5038ec;
+
     border-radius: 50px;
-    padding: 5px;
-    font-size: 11px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+
 }
 
 .timeline-separator-dot-mobile {
-    /*border: 3px solid #282d75;*/
     background: linear-gradient(200deg, #7c3aed, #182fff99) 0 0 / 200% 200%;
     font-weight: bold;
     border-radius: 50px;

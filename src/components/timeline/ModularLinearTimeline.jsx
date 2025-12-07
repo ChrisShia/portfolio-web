@@ -48,14 +48,8 @@ function ModularLinearTimeline() {
                                 <LinearTimelineSpotlightCard item={item} index={index}/>
                                 <TimelineConnector className={"connector-down"} style={{backgroundColor:"#4a4ac0", width:"1px", flexGrow:"0"}}/>
                             </TimelineSeparator>
-                            {/*<TimelineContent >*/}
-                            {/*    <RightOrientedTimelineSpotlightCard item={item} index={index}/>*/}
-                            {/*</TimelineContent>*/}
                         </TimelineItem>
                     ))}
-                    {/*<TimelineSeparator style={{alignItems: "baseline"}}>*/}
-                    {/*    <ModularLinearTimelineLastConnector/>*/}
-                    {/*</TimelineSeparator>*/}
 
                 </Timeline>
             </div>

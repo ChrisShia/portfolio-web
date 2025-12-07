@@ -25,14 +25,14 @@ function Bio() {
                     </div>
                 </HeaderWindowContainerBioPage>
                 <ResponsiveModularTimeline />
-                <div className={"fixed-footer"}>
-                    {!isMobile &&<Dock
+                {!isMobile &&<div className={"fixed-footer"}>
+                    <Dock
                         items={dockItems}
                         panelHeight={78}
                         baseItemSize={60}
                         magnification={80}
-                    />}
-                </div>
+                    />
+                </div>}
             </div>
     )
 }

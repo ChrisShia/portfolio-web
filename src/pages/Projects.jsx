@@ -10,10 +10,18 @@ import skills from "../api/SkillsAPI.jsx";
 import TitleImageContainerComponent from "../components/cardswap/card/TitleImageContainerComponent.jsx";
 import "./Projects.css"
 import ProjectsGridContainer from "../containers/projects/ProjectsGridContainer.jsx";
+import Dock from "../../components/Dock.jsx";
+import useDockItems from "../dock/dockItems.jsx";
+import {useMediaQuery} from "react-responsive";
 
 function Projects() {
     const [codingSkills, setCodingSkills] = useState([]);
     const [loading, setLoading] = useState([]);
+
+    const dockItems = useDockItems();
+    const isMobile = useMediaQuery({
+        query: '(max-width: 768px)'
+    })
 
     useEffect(() => {
         async function fetchCodingSkills() {
@@ -77,6 +85,15 @@ function Projects() {
             </HeaderWindowContainerProjectsPage>
 
             <ProjectsGridContainer />
+
+            {!isMobile &&<div className={"fixed-footer"}>
+                <Dock
+                    items={dockItems}
+                    panelHeight={78}
+                    baseItemSize={60}
+                    magnification={80}
+                />
+            </div>}
         </div>
     )
 }

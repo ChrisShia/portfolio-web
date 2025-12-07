@@ -5,3 +5,10 @@
     align-items: center;
     justify-content: space-between;
 }
+
+@media (max-width: 1200px) {
+    .bio-page-container {
+        flex-grow: 1;
+        justify-content: flex-start;
+    }
+}
