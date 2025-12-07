@@ -3,7 +3,7 @@
     /*height: 100%;*/
 }
 
-.header {
+.project-card-header {
     display: flex;
     height:45px;
     font-size: 15px;
@@ -13,16 +13,16 @@
     align-items: center;
 }
 
-.title {
+.project-card-title {
     font-family: "Press Start 2P", sans-serif;
     letter-spacing: 0px;
 }
 
-.title-icon {
+.project-card-title-icon {
     width: 40px;
 }
 
-.content {
+.project-card-content {
     padding: 1rem 1rem;
     text-align: start;
 }
@@ -31,26 +31,34 @@
     /*margin: 0 1rem;*/
 }
 
-.footer {
+.project-card-footer {
     display: flex;
     padding: 1rem 1rem;
     justify-content: space-between;
 }
 
-.technologies {
+.project-card-technologies {
     display: flex;
     gap: 3px;
 }
 
-.github {
+.project-card-github-icon {
     width: 30px;
     height: 30px;
     color: white;
+    overflow: visible;
 }
 
-.github > svg {
+.project-card-github-icon > svg {
     width: 100%;
     height: 100%;
+}
+
+.project-card-github-icon:hover {
+    font-weight: bold;
+    color: white;
+    transform: scale(1.3,1.3);
+    transition: 0.5s ease;
 }
 
 .project-card-spotlight {
@@ -80,10 +88,15 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), #800080, transparent 10%);
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), #282d75, transparent 10%);
     opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
+}
+
+.project-card-spotlight:hover {
+    transform: scale(1.04,1.04);
+    transition: 0.6s ease;
 }
 
 .project-card-spotlight:hover::before,

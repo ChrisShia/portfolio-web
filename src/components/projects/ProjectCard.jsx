@@ -28,22 +28,22 @@ function ProjectCard({icon, title, short_description,technologies, github_url}) 
     return (
         <div className={"project-card-wrapper"}>
             <ProjectSpotlightCard>
-                <div className={"header"}>
-                    <div className={"title-icon"}>
+                <div className={"project-card-header"}>
+                    <div className={"project-card-title-icon"}>
                         {icon}
                     </div>
-                    <div className={"title"}>
+                    <div className={"project-card-title"}>
                         {title}
                     </div>
                 </div>
 
-                <div className={"content"}>
+                <div className={"project-card-content"}>
                     {short_description}
                 </div>
 
-                <div className={"footer"}>
+                <div className={"project-card-footer"}>
                     {technologies ? (
-                        <div className={"technologies"}>
+                        <div className={"project-card-technologies"}>
                             {technologies.map((item, index) => (
                                 item ? (
                                     <div key={index}>
@@ -56,7 +56,7 @@ function ProjectCard({icon, title, short_description,technologies, github_url}) 
                         </div>
                     ):(<div/>)}
                     {github_url ? (
-                            <a className={"github"} href={github_url}>
+                            <a className={"project-card-github-icon"} href={github_url}>
                                 <VscGithub />
                             </a>
                         ) : (<div />)
